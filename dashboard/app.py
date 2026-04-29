@@ -6,7 +6,6 @@ import folium
 from streamlit_folium import st_folium, folium_static
 import plotly.express as px
 from pathlib import Path
-from dashboard.utils import LogTransformedRegressor
 
 # Import custom class
 from utils import LogTransformedRegressor
