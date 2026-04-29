@@ -555,7 +555,7 @@ with tab2:
                                 icon=folium.Icon(color=color, icon='tint', prefix='fa')
                             ).add_to(m2)
                         
-                        folium_static(m2, width=1000, height=700)
+                        folium_static(m2, width=2000, height=700)
                     
                     with col_legend2:
                         st.markdown("### 📊 Water Quality Standards")
@@ -575,6 +575,110 @@ with tab2:
                         st.markdown("🟠 Moderate: 301-600")
                         st.markdown("🔴 High: > 600")
                         st.caption("*Based on WHO & SANS 241 standards*")
+                    
+                    # comparison with 2015
+                    st.markdown("---")
+                    st.subheader("📊 2026 Risk Summary & Comparison")
+                    
+                    # Current 2026 stats
+                    col1, col2, col3, col4 = st.columns(4)
+                    
+                    red_2026 = (latest_uploaded['Site_Color'] == 'red').sum()
+                    orange_2026 = (latest_uploaded['Site_Color'] == 'orange').sum()
+                    green_2026 = (latest_uploaded['Site_Color'] == 'green').sum()
+                    total_2026 = len(latest_uploaded)
+                    
+                    # 2015 baseline stats (from Tab 1 data)
+                    red_2015 = (latest_data['Site_Color'] == 'red').sum()
+                    orange_2015 = (latest_data['Site_Color'] == 'orange').sum()
+                    green_2015 = (latest_data['Site_Color'] == 'green').sum()
+                    total_2015 = len(latest_data)
+                    
+                    # Calculate changes
+                    red_change = red_2026 - red_2015
+                    orange_change = orange_2026 - orange_2015
+                    green_change = green_2026 - green_2015
+                    
+                    with col1:
+                        st.metric(
+                            "🔴 High Risk Sites",
+                            red_2026,
+                            delta=f"{red_change:+d} from 2015",
+                            delta_color="inverse"  # Red increase is bad
+                        )
+                        st.caption(f"{(red_2026/total_2026*100):.1f}% (2015: {(red_2015/total_2015*100):.1f}%)")
+                    
+                    with col2:
+                        st.metric(
+                            "⚠️ Warning Sites",
+                            orange_2026,
+                            delta=f"{orange_change:+d} from 2015",
+                            delta_color="off"  # Neutral color
+                        )
+                        st.caption(f"{(orange_2026/total_2026*100):.1f}% (2015: {(orange_2015/total_2015*100):.1f}%)")
+                    
+                    with col3:
+                        st.metric(
+                            "✓ Safe Sites",
+                            green_2026,
+                            delta=f"{green_change:+d} from 2015",
+                            delta_color="normal"  # Green increase is good
+                        )
+                        st.caption(f"{(green_2026/total_2026*100):.1f}% (2015: {(green_2015/total_2015*100):.1f}%)")
+                    
+                    with col4:
+                        st.metric("Total Sites", total_2026)
+                        if total_2026 != total_2015:
+                            st.caption(f"(2015 had {total_2015} sites)")
+                    with col4:
+                        st.metric("Total Sites", total_2026)
+                        if total_2026 != total_2015:
+                            st.caption(f"(2015 had {total_2015} sites)")
+                    
+                    # ADD THIS SECTION HERE:
+                    st.subheader("⚠️ Top 10 Sites Requiring Attention From New Data")
+                    
+                    # Create risk score: red=3, orange=2, yellow=2, green=1
+                    risk_scores = {
+                        'red': 3,
+                        'orange': 2,
+                        'yellow': 2,
+                        'green': 1
+                    }
+                    
+                    latest_uploaded['risk_score'] = (
+                        latest_uploaded['Alk_Color'].map(risk_scores).fillna(1) +
+                        latest_uploaded['EC_Color'].map(risk_scores).fillna(1) +
+                        latest_uploaded['DRP_Color'].map(risk_scores).fillna(1)
+                    )
+                    
+                    worst_sites_2026 = latest_uploaded.nlargest(10, 'risk_score')[
+                        ['Location_ID', 'pred_Alkalinity', 'Alk_Risk', 'pred_EC', 'EC_Risk', 'pred_DRP', 'DRP_Risk', 'risk_score']
+                    ].copy()
+                    
+                    # Format the table for better display
+                    worst_sites_display = worst_sites_2026.rename(columns={
+                        'Location_ID': 'Site ID',
+                        'pred_Alkalinity': 'Alkalinity (mg/L)',
+                        'Alk_Risk': 'Alk Status',
+                        'pred_EC': 'EC (mS/m)',
+                        'EC_Risk': 'EC Status',
+                        'pred_DRP': 'DRP (μg/L)',
+                        'DRP_Risk': 'DRP Status',
+                        'risk_score': 'Risk Score'
+                    })
+                    
+                    # Round numeric columns
+                    worst_sites_display['Alkalinity (mg/L)'] = worst_sites_display['Alkalinity (mg/L)'].round(2)
+                    worst_sites_display['EC (mS/m)'] = worst_sites_display['EC (mS/m)'].round(2)
+                    worst_sites_display['DRP (μg/L)'] = worst_sites_display['DRP (μg/L)'].round(2)
+                    
+                    st.dataframe(worst_sites_display, use_container_width=True, hide_index=True)
+                    
+                    st.caption("*Risk Score: Sum of individual parameter risks (Red=3, Orange/Yellow=2, Green=1). Higher scores indicate sites needing immediate attention.*")
+
+
+                    
                     
         except Exception as e:
             st.error(f"Error processing file: {e}")
