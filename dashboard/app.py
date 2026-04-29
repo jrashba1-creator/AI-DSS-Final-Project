@@ -449,14 +449,14 @@ with tab2:
             
             if missing_base:
                 st.error(f"❌ Missing required columns: {missing_base}")
-            else:
+            #else:
                 # Check if Location_IDs are valid
-                valid_locations = test_data['Location_ID'].unique()
-                invalid_locs = uploaded_data[~uploaded_data['Location_ID'].isin(valid_locations)]['Location_ID'].unique()
+            #    valid_locations = test_data['Location_ID'].unique()
+            #    invalid_locs = uploaded_data[~uploaded_data['Location_ID'].isin(valid_locations)]['Location_ID'].unique()
                 
-                if len(invalid_locs) > 0:
-                    st.warning(f"⚠️ Found {len(invalid_locs)} invalid Location_IDs (not in known sites)")
-                    st.write("Invalid IDs:", invalid_locs[:10])
+            #    if len(invalid_locs) > 0:
+            #        st.warning(f"⚠️ Found {len(invalid_locs)} invalid Location_IDs (not in known sites)")
+            #        st.write("Invalid IDs:", invalid_locs[:10])
                 
                 # Make predictions
                 uploaded_predictions = {}
