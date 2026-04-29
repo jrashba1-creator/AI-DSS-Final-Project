@@ -139,7 +139,7 @@ with tab1:
     test_data['Sample_Date'] = pd.to_datetime(test_data['Sample Date'], format='mixed', dayfirst=True)
     latest_data = test_data.sort_values('Sample_Date').groupby('Location_ID').tail(1).reset_index(drop=True)
     
-    st.write(f"Showing predictions for **{len(latest_data)} sites** (latest 2015 samples). The model was trained on data from 2011-24, and these prediction are the output of the latest 2015 dates for each location within the test dataset.")
+    st.write(f"Showing predictions for **{len(latest_data)} sites** (latest 2015 samples). The model was trained on data from 2011-24, and these predictions are what the model predicts the water quality to be at the latest sample of each site in the test data. (2015)")
     
     # Make predictions for all sites
     predictions = {}
@@ -278,9 +278,9 @@ with tab1:
         st.markdown("""
             Each site is classified by its **worst parameter**:
             
-            - 🔴 **High Risk:** Any parameter exceeds safety limits (e.g., DRP ≥100 μg/L, Alkalinity >400 mg/L, EC >600 mS/m)
-            - ⚠️ **Warning:** Any parameter is elevated but not severe
-            - ✓ **Safe:** All three parameters (Alkalinity, EC, DRP) are within normal ranges
+            - 🔴 **High Risk:** Any parameter exceeds safety limits (RED INDICATOR) (e.g., DRP ≥100 μg/L, Alkalinity >400 mg/L, EC >600 mS/m)
+            - ⚠️ **Warning:** Any parameter is elevated but not severe (ORANGE OR YELLOW INDICATOR)
+            - ✓ **Safe:** All three parameters (Alkalinity, EC, DRP) are within normal ranges (GREEN INDICATOR)
             
             *Thresholds based on WHO & SANS 241 water quality standards*
             """)
