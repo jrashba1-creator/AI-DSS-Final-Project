@@ -449,7 +449,7 @@ with tab2:
             
             if missing_base:
                 st.error(f"❌ Missing required columns: {missing_base}")
-            #else:
+            else:
                 # Check if Location_IDs are valid
             #    valid_locations = test_data['Location_ID'].unique()
             #    invalid_locs = uploaded_data[~uploaded_data['Location_ID'].isin(valid_locations)]['Location_ID'].unique()
