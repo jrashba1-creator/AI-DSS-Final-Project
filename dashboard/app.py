@@ -64,6 +64,9 @@ st.set_page_config(
 # Title
 # Centered Title (larger)
 st.markdown("<h1 style='text-align: center; font-size: 45px;'>💧 South Africa Water Quality Prediction Dashboard</h1>", unsafe_allow_html=True)
+
+st.markdown("<p style='text-align: center; font-size: 18px; color: #666; margin-top: -10px;'>Julius Rashba - DATA 580F AI-Driven Decision Support System Final Project</p>", unsafe_allow_html=True)
+
 st.markdown("<br>", unsafe_allow_html=True)
 
 # Create tabs
