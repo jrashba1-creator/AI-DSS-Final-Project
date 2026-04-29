@@ -63,7 +63,7 @@ st.set_page_config(
 
 # Title
 # Centered Title (larger)
-st.markdown("<h1 style='text-align: center; font-size: 90px;'>💧 South Africa Water Quality Prediction Dashboard</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; font-size: 45px;'>💧 South Africa Water Quality Prediction Dashboard</h1>", unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)
 
 # Create tabs
@@ -117,12 +117,12 @@ except Exception as e:
 
 with tab1:
     st.markdown("""
-    <div style='font-size: 35px;'>
+    <div style='font-size: 20px;'>
     This dashboard uses machine learning models trained on water quality 
     data from 162 monitoring sites across South Africa (2011-2014).
     <br><br>
     <b>Models predict three parameters:</b>
-    <ul style='font-size: 40px;'>
+    <ul style='font-size: 18px;'>
     <li>Total Alkalinity (mg/L)</li>
     <li>Electrical Conductance (mS/m)</li>
     <li>Dissolved Reactive Phosphorus (pollution risk)</li>
@@ -339,10 +339,10 @@ with tab1:
     # OPTION 4: Model Info Expander
     with st.expander("ℹ️ About the Models"):
         st.markdown("""
-        <div style='font-size: 40px;'>
+        <div style='font-size: 20px;'>
         
         <p><b>Model Performance (2015 Test Set):</b></p>
-        <ul style='font-size: 40px;'>
+        <ul style='font-size: 18px;'>
         <li><b>Alkalinity:</b> LightGBM Regressor (R² = 0.70, 65 features)</li>
         <li><b>EC:</b> XGBoost Regressor (R² = 0.78, 72 features)</li>
         <li><b>DRP:</b> XGBoost Regressor (62% recall, 63% precision, 66 features)</li>
@@ -351,7 +351,7 @@ with tab1:
         <p style='font-size: 20px;'><b>Training Data:</b> 2011-2014 samples from 145 monitoring sites</p>
         
         <p style='font-size: 20px;'><b>Features Include:</b></p>
-        <ul style='font-size: 40px;'>
+        <ul style='font-size: 20px;'>
         <li>Climate data (temperature, precipitation, soil moisture)</li>
         <li>Satellite imagery (NDVI, NBR, NDBI, land cover percentages)</li>
         <li>Temporal patterns (rolling averages, lags)</li>
