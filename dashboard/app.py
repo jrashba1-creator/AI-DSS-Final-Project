@@ -613,7 +613,7 @@ with tab2:
                             "⚠️ Warning Sites",
                             orange_2026,
                             delta=f"{orange_change:+d} from 2015",
-                            delta_color="off"  # Neutral color
+                            delta_color="inverse"  # Neutral color
                         )
                         st.caption(f"{(orange_2026/total_2026*100):.1f}% (2015: {(orange_2015/total_2015*100):.1f}%)")
                     
@@ -630,10 +630,7 @@ with tab2:
                         st.metric("Total Sites", total_2026)
                         if total_2026 != total_2015:
                             st.caption(f"(2015 had {total_2015} sites)")
-                    with col4:
-                        st.metric("Total Sites", total_2026)
-                        if total_2026 != total_2015:
-                            st.caption(f"(2015 had {total_2015} sites)")
+
                     
                     # ADD THIS SECTION HERE:
                     st.subheader("⚠️ Top 10 Sites Requiring Attention From New Data")
