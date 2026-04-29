@@ -627,9 +627,13 @@ with tab2:
                         st.caption(f"{(green_2026/total_2026*100):.1f}% (2015: {(green_2015/total_2015*100):.1f}%)")
                     
                     with col4:
-                        st.metric("Total Sites", total_2026)
-                        if total_2026 != total_2015:
-                            st.caption(f"(2015 had {total_2015} sites)")
+                        total_change = total_2026 - total_2015
+                        st.metric(
+                            "Total Sites", 
+                            total_2026,
+                            delta=f"{total_change:+d} from 2015" if total_change != 0 else None,
+                            delta_color="normal"  # Increase = green, decrease = red
+                        )
 
                     
                     # ADD THIS SECTION HERE:
