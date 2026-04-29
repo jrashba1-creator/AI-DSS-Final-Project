@@ -275,15 +275,15 @@ with tab1:
         st.metric("Total Sites", len(latest_data))
     
     with st.expander("ℹ️ How are risk levels calculated?"):
-    st.markdown("""
-        Each site is classified by its **worst parameter**:
-        
-        - 🔴 **High Risk:** Any parameter exceeds safety limits (e.g., DRP ≥100 μg/L, Alkalinity >400 mg/L, EC >600 mS/m)
-        - ⚠️ **Warning:** Any parameter is elevated but not severe
-        - ✓ **Safe:** All three parameters (Alkalinity, EC, DRP) are within normal ranges
-        
-        *Thresholds based on WHO & SANS 241 water quality standards*
-        """)
+        st.markdown("""
+            Each site is classified by its **worst parameter**:
+            
+            - 🔴 **High Risk:** Any parameter exceeds safety limits (e.g., DRP ≥100 μg/L, Alkalinity >400 mg/L, EC >600 mS/m)
+            - ⚠️ **Warning:** Any parameter is elevated but not severe
+            - ✓ **Safe:** All three parameters (Alkalinity, EC, DRP) are within normal ranges
+            
+            *Thresholds based on WHO & SANS 241 water quality standards*
+            """)
 
     # ADD THIS NEW SECTION HERE:
     st.subheader("📈 Prediction Distributions")
