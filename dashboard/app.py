@@ -635,6 +635,68 @@ with tab2:
                             delta_color="normal"  # Increase = green, decrease = red
                         )
 
+                    # ADD DISTRIBUTION HISTOGRAMS HERE:
+                    st.subheader("📈 2026 Prediction Distributions")
+                    
+                    # Create three columns for the histograms
+                    hist_col1, hist_col2, hist_col3 = st.columns(3)
+                    
+                    with hist_col1:
+                        # Alkalinity histogram
+                        fig_alk = px.histogram(
+                            latest_uploaded, 
+                            x='pred_Alkalinity',
+                            color='Alk_Risk',
+                            title='Alkalinity Distribution (2026)',
+                            labels={'pred_Alkalinity': 'Alkalinity (mg/L)', 'count': 'Number of Sites'},
+                            color_discrete_map={
+                                'Very Low': 'orange',
+                                'Low': '#DAA520',
+                                'Normal': 'green',
+                                'High': 'orange',
+                                'Very High': 'red'
+                            },
+                            nbins=30
+                        )
+                        fig_alk.update_layout(height=400, showlegend=True)
+                        st.plotly_chart(fig_alk, use_container_width=True)
+                    
+                    with hist_col2:
+                        # EC histogram
+                        fig_ec = px.histogram(
+                            latest_uploaded,
+                            x='pred_EC',
+                            color='EC_Risk',
+                            title='Electrical Conductance Distribution (2026)',
+                            labels={'pred_EC': 'EC (mS/m)', 'count': 'Number of Sites'},
+                            color_discrete_map={
+                                'Excellent': 'green',
+                                'Good': 'lightgreen',
+                                'Moderate': 'orange',
+                                'High': 'red'
+                            },
+                            nbins=30
+                        )
+                        fig_ec.update_layout(height=400, showlegend=True)
+                        st.plotly_chart(fig_ec, use_container_width=True)
+                    
+                    with hist_col3:
+                        # DRP histogram
+                        fig_drp = px.histogram(
+                            latest_uploaded,
+                            x='pred_DRP',
+                            color='DRP_Risk',
+                            title='DRP Distribution (2026)',
+                            labels={'pred_DRP': 'DRP (μg/L)', 'count': 'Number of Sites'},
+                            color_discrete_map={
+                                'Safe': 'green',
+                                'Warning': 'orange',
+                                'Severe': 'red'
+                            },
+                            nbins=30
+                        )
+                        fig_drp.update_layout(height=400, showlegend=True)
+                        st.plotly_chart(fig_drp, use_container_width=True)
                     
                     # ADD THIS SECTION HERE:
                     st.subheader("⚠️ Top 10 Sites Requiring Attention From New Data")
