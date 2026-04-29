@@ -1,11 +1,12 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import dill as joblib
+import joblib
 import folium
 from streamlit_folium import st_folium, folium_static
 import plotly.express as px
 from pathlib import Path
+from dashboard.utils import LogTransformedRegressor
 
 # Import custom class
 from utils import LogTransformedRegressor
@@ -74,7 +75,7 @@ tab1, tab2 = st.tabs(["🗺️ Site Predictions", "📤 Upload Custom Data"])
 def load_models():
     models = {}
     for target in ['Alkalinity', 'EC', 'DRP']:
-        filepath = f'models/{target.lower()}_model.pkl'
+        filepath = f'dashboard/models/{target.lower()}_model.pkl'  # Added 'dashboard/'
         
         # Load with explicit file opening
         with open(filepath, 'rb') as f:
@@ -84,16 +85,18 @@ def load_models():
         if data.get('is_log_transformed', False):
             from utils import LogTransformedRegressor
             wrapped_model = LogTransformedRegressor(data['model'])
-            wrapped_model.model_ = data['model']  # Set the trained model
+            wrapped_model.model_ = data['model']
             data['model'] = wrapped_model
         
         models[target] = data
     return models
-
 # Load test data (cached)
 @st.cache_data
 def load_test_data():
-    df = pd.read_csv('ml_ready_test.csv')
+    df = pd.read_csv('dashboard/ml_ready_test.csv')  # Added 'dashboard/'
+    # Add Cluster column if missing
+    if 'Cluster' not in df.columns:
+        df['Cluster'] = 0
     return df
 
 # Load models and data
