@@ -139,7 +139,7 @@ with tab1:
     test_data['Sample_Date'] = pd.to_datetime(test_data['Sample Date'], format='mixed', dayfirst=True)
     latest_data = test_data.sort_values('Sample_Date').groupby('Location_ID').tail(1).reset_index(drop=True)
     
-    st.write(f"Showing predictions for **{len(latest_data)} sites** (latest 2015 samples)")
+    st.write(f"Showing predictions for **{len(latest_data)} sites** (latest 2015 samples). The model was trained on data from 2011-24, and these prediction are the output of the latest 2015 dates for each location within the test dataset.")
     
     # Make predictions for all sites
     predictions = {}
