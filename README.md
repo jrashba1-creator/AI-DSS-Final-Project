@@ -1,4 +1,4 @@
-🌊 South Africa Water Quality Prediction DashboardLive Dashboard: https://ai-dss-final-project-julius-rashba.streamlit.app
+South Africa Water Quality Prediction DashboardLive Dashboard: https://ai-dss-final-project-julius-rashba.streamlit.app
 Author: Julius Rashba
 Course: DATA 580F - AI-Driven Decision Support Systems
 Institution: Binghamton Univsersity
