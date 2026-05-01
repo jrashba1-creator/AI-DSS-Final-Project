@@ -1,0 +1,163 @@
+Latitude,Longitude,land_cover_250m,land_cover_500m
+-34.405833,19.600556,Grassland,Grassland
+-34.329722,18.990278,Shrubland,Grassland
+-34.250556,20.9925,Shrubland,Shrubland
+-34.092222,21.295278,Grassland,Cropland
+-34.075556,20.145556,Shrubland,Shrubland
+-34.065833,20.404167,Grassland,Shrubland
+-34.039722,22.133333,Tree cover,Shrubland
+-34.031944,22.053333,Shrubland,Shrubland
+-34.02861,22.22222,Tree cover,Tree cover
+-34.005833,22.351111,Grassland,Grassland
+-33.980556,21.653333,Cropland,Cropland
+-33.970833,22.548333,Tree cover,Tree cover
+-33.897778,20.012778,Shrubland,Shrubland
+-33.870833,20.003333,Tree cover,Tree cover
+-33.818056,19.694722,Shrubland,Shrubland
+-33.72266667,18.61691667,Cropland,Cropland
+-33.7075,18.97444444,Cropland,Built-up
+-33.501667,21.624167,Tree cover,Shrubland
+-33.464444,18.740556,Grassland,Grassland
+-33.38056,19.30167,Grassland,Grassland
+-33.31388889,19.07472222,Shrubland,Shrubland
+-33.13083,18.86278,Cropland,Cropland
+-33.08883333,19.21878333,Grassland,Grassland
+-32.94583,18.33667,Grassland,Shrubland
+-32.601389,18.750556,Shrubland,Shrubland
+-32.595833,19.009444,Tree cover,Cropland
+-32.502778,19.535833,Bare/sparse,Bare/sparse
+-31.860278,18.6875,Shrubland,Shrubland
+-31.5653,18.3306,Cropland,Shrubland
+-31.554722,29.245556,Tree cover,Tree cover
+-31.436944,20.474722,Bare/sparse,Bare/sparse
+-31.396,29.2651,Tree cover,Tree cover
+-31.394444,20.947222,Shrubland,Bare/sparse
+-31.104278,29.399722,Tree cover,Tree cover
+-31.031389,28.883333,Grassland,Grassland
+-31.000833,26.353056,Shrubland,Shrubland
+-30.86013889,29.07125,Cropland,Cropland
+-30.830556,26.921389,Grassland,Grassland
+-30.77586667,29.03221667,Shrubland,Shrubland
+-30.733889,29.828333,Grassland,Grassland
+-30.679722,26.7125,Water,Tree cover
+-30.570833,29.150556,Grassland,Grassland
+-30.568333,29.422778,Tree cover,Grassland
+-30.534167,24.961944,Shrubland,Grassland
+-30.398056,30.601944,Tree cover,Tree cover
+-30.336111,27.359444,Grassland,Grassland
+-30.27402,30.69602,Tree cover,Tree cover
+-30.160091,27.40124,Grassland,Grassland
+-30.13573889,30.67422222,Tree cover,Tree cover
+-29.987778,29.851667,Tree cover,Cropland
+-29.803611,30.516111,Tree cover,Tree cover
+-29.7775,29.470833,Grassland,Grassland
+-29.758889,30.935278,Tree cover,Tree cover
+-29.744167,29.905833,Grassland,Grassland
+-29.658056,25.973333,Grassland,Grassland
+-29.651389,22.746389,Shrubland,Shrubland
+-29.641944,30.6875,Tree cover,Tree cover
+-29.615556,27.065278,Grassland,Grassland
+-29.380556,30.2775,Grassland,Grassland
+-29.1825,23.575556,Water,Shrubland
+-29.161667,23.696389,Water,Shrubland
+-29.161667,30.629722,Grassland,Grassland
+-29.160278,26.573333,Grassland,Grassland
+-29.140556,31.391944,Tree cover,Tree cover
+-29.042222,24.6,Shrubland,Shrubland
+-29.033333,23.983333,Grassland,Cropland
+-29.028629,24.638389,Shrubland,Shrubland
+-28.96362,19.15486,Water,Bare/sparse
+-28.883333,27.89,Built-up,Built-up
+-28.801278,31.955389,Cropland,Cropland
+-28.768056,20.720556,Tree cover,Shrubland
+-28.760833,17.730278,Water,Bare/sparse
+-28.75,30.442778,Built-up,Built-up
+-28.747778,31.745833,Tree cover,Grassland
+-28.735556,29.820556,Tree cover,Grassland
+-28.7115,24.07288889,Grassland,Shrubland
+-28.69485,28.23487,Tree cover,Tree cover
+-28.460833,21.248889,Water,Water
+-28.44555556,32.325,Cropland,Cropland
+-28.404444,30.013056,Grassland,Grassland
+-28.376944,24.303056,Shrubland,Shrubland
+-28.338333,31.373611,Shrubland,Shrubland
+-28.308889,31.9025,Tree cover,Tree cover
+-28.141944,26.417778,Grassland,Grassland
+-28.1175,26.719444,Grassland,Grassland
+-28.116667,26.725278,Grassland,Grassland
+-28.068333,31.55,Tree cover,Tree cover
+-28.058889,30.373611,Grassland,Grassland
+-27.937778,31.209444,Shrubland,Grassland
+-27.935,26.126667,Shrubland,Grassland
+-27.902778,24.615556,Shrubland,Shrubland
+-27.802778,28.768333,Grassland,Grassland
+-27.671111,27.236944,Built-up,Built-up
+-27.602222,29.942778,Grassland,Grassland
+-27.573056,24.746389,Shrubland,Shrubland
+-27.5275,30.858056,Grassland,Grassland
+-27.495556,26.074722,Grassland,Grassland
+-27.4275,28.525833,Cropland,Cropland
+-27.4,26.624722,Grassland,Grassland
+-27.398611,26.614722,Grassland,Grassland
+-27.38972222,26.46388889,Grassland,Grassland
+-27.363611,31.783333,Tree cover,Tree cover
+-27.356667,27.286389,Grassland,Grassland
+-27.3,28.586944,Grassland,Grassland
+-27.273889,28.49,Tree cover,Built-up
+-27.169444,29.233889,Grassland,Grassland
+-27.044444,27.005,Grassland,Grassland
+-27.02314,28.59389,Grassland,Grassland
+-27.01011111,26.69808333,Water,Grassland
+-27.00222,28.76528,Grassland,Grassland
+-26.98472222,26.63227778,Grassland,Cropland
+-26.970278,27.211111,Tree cover,Grassland
+-26.905,32.324722,Tree cover,Tree cover
+-26.880278,26.965,Grassland,Grassland
+-26.861111,28.884722,Cropland,Cropland
+-26.73806,27.59194,Tree cover,Grassland
+-26.648056,27.089444,Grassland,Grassland
+-26.619444,27.980833,Tree cover,Grassland
+-26.510278,28.351389,Grassland,Grassland
+-26.45,28.085833,Grassland,Grassland
+-26.03611,30.99778,Shrubland,Shrubland
+-26.006389,29.253889,Grassland,Grassland
+-25.99136,27.84208,Grassland,Grassland
+-25.81048333,27.90955222,Grassland,Grassland
+-25.73411,27.21422,Grassland,Grassland
+-25.681111,31.783333,Tree cover,Tree cover
+-25.67386,31.57527,Cropland,Cropland
+-25.57877778,29.12747222,Grassland,Grassland
+-25.513889,31.224444,Tree cover,Tree cover
+-25.49037,30.6986,Tree cover,Tree cover
+-25.45963889,28.26430556,Grassland,Grassland
+-25.447222,30.711667,Tree cover,Tree cover
+-25.436111,31.982222,Tree cover,Tree cover
+-25.398889,31.610556,Grassland,Grassland
+-25.362222,31.956667,Grassland,Grassland
+-25.20639,27.558,Cropland,Cropland
+-25.14944444,31.94055556,Grassland,Grassland
+-25.127778,27.628889,Shrubland,Shrubland
+-24.99328,30.81444,Grassland,Grassland
+-24.9675,31.516667,Tree cover,Shrubland
+-24.95861111,29.39527778,Grassland,Grassland
+-24.925278,29.324444,Shrubland,Shrubland
+-24.768889,31.39,Shrubland,Shrubland
+-24.69514,27.40906,Cropland,Cropland
+-24.679167,30.8025,Grassland,Grassland
+-24.670833,28.560833,Shrubland,Shrubland
+-24.39619444,27.08983333,Tree cover,Tree cover
+-24.282222,28.090278,Shrubland,Shrubland
+-24.183889,30.823889,Tree cover,Tree cover
+-24.058889,31.237222,Shrubland,Shrubland
+-24.034167,31.123611,Tree cover,Shrubland
+-23.838611,31.640833,Water,Shrubland
+-23.763056,27.908611,Shrubland,Shrubland
+-23.658056,31.05,Shrubland,Shrubland
+-23.281,30.54305556,Tree cover,Tree cover
+-23.23572222,27.717,Tree cover,Shrubland
+-22.935,28.004167,Tree cover,Tree cover
+-22.91028,29.61111,Shrubland,Shrubland
+-22.769722,30.886944,Tree cover,Cropland
+-22.548889,28.898056,Tree cover,Tree cover
+-22.43772222,31.07805556,Shrubland,Shrubland
+-22.225556,29.990556,Water,Tree cover
