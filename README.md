@@ -10,33 +10,10 @@ This project uses machine learning to predict water quality at 162 monitoring si
 - Electrical Conductance (mS/m)
 - Dissolved Reactive Phosphorus (μg/L - pollution risk indicator)
 
-Repository Structure
-AI-DSS-Final-Project/
-│
-├── notebooks/           # Complete data pipeline (6 notebooks)
-│   ├── Notebook 1 - Data Splitting/
-│   ├── Notebook 2 - Terraclimate Extraction/
-│   ├── Notebook 3 - Landsat Extraction/
-│   ├── Notebook 4 - Copernicus DEM and ESA WorldCover Extraction/
-│   ├── Notebook 5 - Data Merging and Feature Engineering/
-│   └── Notebook 6 - Model Training and Evaluation/
-│
-├── dashboard/           # Streamlit web application
-│   ├── app.py             # Main dashboard code
-│   ├── utils.py           # Helper functions
-│   ├── models/            # Trained ML models (.pkl)
-│   ├── ml_ready_test.csv  # Test dataset with features
-│   └── requirements.txt   # Python dependencies
-│
-└── data/               # Generated CSV files from pipeline
+<img width="539" height="420" alt="Screenshot 2026-04-30 at 11 51 05 PM" src="https://github.com/user-attachments/assets/bbc6da2b-7738-40b2-8c26-4594b8c7ac8b" />
 
 
-Each notebook is organized as follows:
 
-Notebook X/
-├── NotebookX.ipynb    # Executable Jupyter notebook
-├── input/             # Required input files for this step
-└── output/            # Generated output files
 
 Pipeline Steps:
 
